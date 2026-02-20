@@ -46,10 +46,15 @@ void bubble()
 
 void printsq()
 {
+    printf("-------------------------------------------\n");
+    printf("| Transaction Id |    Profit  |\t Deadline |\n");
+    printf("-------------------------------------------\n");
     for(int i=0;i<n;i++)
     {
-        printf("T%d\t%d\t%d\n",transaction_id[i],profit[i],deadline[i]);
+        printf("|\tT%d     \t |\t%d    |    %d\t  |\n",transaction_id[i],profit[i],deadline[i]);
     }
+    printf("-------------------------------------------\n\n\n");
+
 }
 
 void job_sq()
@@ -75,13 +80,15 @@ void job_sq()
 int main()
 {   
     for(int i=0;i<n;i++) schedule[i]=-1;
-    printf("---------------Unsorted------------------\n");
+    printf("------------------------------------------");
+    printf("\n               Unsorted                  \n");
     printsq();
     bubble();
-    printf("---------------Sorted--------------------\n");
+    printf("-------------------------------------------");
+    printf("\n               Sorted                  \n");
     printsq();
-    job_sq();
     printf("--------------Final Transaction schedule----------------------\n");
+    job_sq();
     for(int i=0;i<n;i++)
     {
         printf("%d\n",schedule[i]);
