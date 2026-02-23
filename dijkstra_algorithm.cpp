@@ -49,20 +49,18 @@ void dijkstra_algorithm(int src,vector<vector<Edge>>g,int V){
 
 int main()
 {
-    int V=6;
+    int V=5;
     vector<vector<Edge>>g(V);//graph structure
-    g[0].push_back(Edge(1,2));
-    g[0].push_back(Edge(2,4));
+    g[0].push_back(Edge(1,6));
+    g[0].push_back(Edge(3,1));
 
-    g[1].push_back(Edge(2,1));
-    g[1].push_back(Edge(3,7));
+    g[1].push_back(Edge(2,5));
+    g[1].push_back(Edge(4,2));
 
-    g[2].push_back(Edge(4,3));
+    g[3].push_back(Edge(1,2));
+    g[3].push_back(Edge(4,1));
 
-    g[3].push_back(Edge(5,1));
-
-    g[4].push_back(Edge(3,2));
-    g[4].push_back(Edge(5,5));
+    g[4].push_back(Edge(2,5));
     dijkstra_algorithm(0,g,V);
     return 0;
 }
