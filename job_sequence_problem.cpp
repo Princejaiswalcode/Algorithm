@@ -1,10 +1,10 @@
 #include<stdio.h>
-int deadline[8]={4,5,6,6,4,2,2,2};
-int profit[8]={20,60,70,65,25,80,10,22};
-int transaction_id[8]={1,2,3,4,5,6,7,8};
+int deadline[5]={2,1,2,1,3};
+int profit[5]={100,50,10,20,30};
+int transaction_id[5]={1,2,3,4,5};
 int max_deadline=-1;
 int n=sizeof(profit)/sizeof(profit[0]);
-int schedule[8];
+int schedule[5];
 
 int total_profit=0;
 
